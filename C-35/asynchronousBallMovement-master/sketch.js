@@ -7,12 +7,12 @@ function setup(){
     database=firebase.database();
 
     createCanvas(500,500);
-    ball = createSprite(250,250,10,10);
-    ball.shapeColor = "red";
+    hypnoticball = createSprite(350,350,10,10);
+    hypnoticball.shapeColor = "red";
 
 //read
 
-var hypnoticballPosition=database.ref('ball/position');
+var hypnoticballPosition=database.ref('ball/positions');
 
 hypnoticballPosition.on("value",readPosition, showError)
 
